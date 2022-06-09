@@ -1,0 +1,18 @@
+# DATA INTERPOLATED INTO A .CSV FILE.
+
+# 'interpolated.csv' contains angle, speed and the path to the image of each sample.
+
+--------------------------------------------------------
+
+# DATA:
+
+*data_train
+for neural arquitecture tunning
+
+*data_0
+Contains recording in small_world.
+
+*data_1
+Contains recording in nurburing. 
+
+

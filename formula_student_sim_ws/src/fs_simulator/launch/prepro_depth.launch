@@ -1,0 +1,25 @@
+<launch>
+
+  <param name="robot_description" command="xacro '$(find fs_simulator)/urdf/fs.urdf.xacro'"/>
+
+  <arg name="rvizconfig" default="$(find fs_simulator)/config/prepro.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" />
+  <!-- <node name="rviz" pkg="rviz" type="rviz"/>  -->
+  
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/> 
+
+  <!-- Node for transforming depth image to pointcloud  -->
+  <node pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager" output="screen" />
+
+  <node pkg="nodelet" type="nodelet" name="nodelet1"
+        args="load depth_image_proc/point_cloud_xyz nodelet_manager">
+    <remap from="camera_info" to="/camera/depth/camera_info"/>
+    <remap from="image_rect" to="/camera/depth/image_rect_raw"/>
+    <remap from="points" to="/camera/depth/points"/>
+  </node>
+
+  <!-- If conflicts, run code with python as: "python eval_pix2pix_V3_depth_map.py" in the correct conda environment -->
+  <!-- <node name="depth_evaluator" pkg="fs_simulator" type="eval_pix2pix_V3_depth_map.py"/> -->
+
+</launch>

@@ -1,0 +1,10 @@
+<launch>
+
+<arg name="record" default="true" />
+
+<!-- Record data  -->
+  <node pkg="rosbag" type="record" name="rosbag_record_all"
+  args="--split --size 1024 --lz4 -o $(find imitation_learning)/data/session fs/cmd_vel_stamped /fs/c1/image_raw"
+  if="$(arg record)" />
+
+</launch>

@@ -1,0 +1,81 @@
+joint_limits:
+  JointSteerRight:
+    has_position_limits: true
+    min_position: -1.570796
+    max_position: 1.570796
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: true
+    max_acceleration: 2.5
+    has_jerk_limits: true
+    max_jerk: 50.0
+    has_effort_limits: true
+    max_effort: 1.0
+
+  JointSteerLeft:
+    has_position_limits: true
+    min_position: -1.570796
+    max_position: 1.570796
+    has_velocity_limits: true
+    max_velocity: 1.0
+    has_acceleration_limits: true
+    max_acceleration: 2.5
+    has_jerk_limits: true
+    max_jerk: 50.0
+    has_effort_limits: true
+    max_effort: 1.0
+
+
+  JointBaseWheelBR:
+    has_position_limits: false
+    min_position: 0
+    max_position: 10
+    has_velocity_limits: true
+    max_velocity: 10
+    has_acceleration_limits: true
+    max_acceleration: 5.0
+    has_jerk_limits: true
+    max_jerk: 100.0
+    has_effort_limits: true
+    max_effort: 1.0
+
+  JointBaseWheelBL:
+    has_position_limits: false
+    min_position: 0
+    max_position: 10
+    has_velocity_limits: true
+    max_velocity: 10
+    has_acceleration_limits: true
+    max_acceleration: 5.0
+    has_jerk_limits: true
+    max_jerk: 100.0
+    has_effort_limits: true
+    max_effort: 1.0
+
+
+  JointBaseWheelFR:
+    has_position_limits: false
+    min_position: 0
+    max_position: 10
+    has_velocity_limits: true
+    max_velocity: 10
+    has_acceleration_limits: true
+    max_acceleration: 5.0
+    has_jerk_limits: true
+    max_jerk: 100.0
+    has_effort_limits: true
+    max_effort: 1.0
+
+
+  JointBaseWheelFL:
+    has_position_limits: false
+    min_position: 0
+    max_position: 10
+    has_velocity_limits: true
+    max_velocity: 10
+    has_acceleration_limits: true
+    max_acceleration: 5.0
+    has_jerk_limits: true
+    max_jerk: 100.0
+    has_effort_limits: true
+    max_effort: 1.0

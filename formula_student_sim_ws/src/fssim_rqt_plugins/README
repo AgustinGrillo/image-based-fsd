@@ -1,0 +1,12 @@
+rqt_fssim_track_editr -> package to create tracks
+
+TO CREATE TRACKS:
+
+1) Run in Terminal: roscore
+2) In new terminal at workspace run: rosrun rqt_fssim_track_editor rqt_fssim_track_editor
+3) When GUI is opened with control key select points to create the track.
+4) Compute track.
+5) Change name.
+6) Export track.
+7) Close all terminals with ctrl+C
+

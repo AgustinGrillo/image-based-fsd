@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<launch>
+
+    <machine name="at_robot_server" address="192.168.0.176" user="manuel" env-loader="/home/manuel/at_robot_server_ros_env.sh"/>
+    <machine name="at_robot" address="192.168.0.143" user="manuel" env-loader="/home/manuel/at_robot_ros_env.sh"/>
+
+    <arg name="debug" default="false" />
+    <arg unless="$(arg debug)" name="launch_prefix" value="" />
+    <arg     if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args" />
+    <arg name="robot_name" default="fs"/>
+
+
+    <arg name="map_file" default="$(find fs_hardware_interface)/maps/layout.yaml"/>
+
+
+
+
+    <rosparam file="$(find fs_hardware_interface)/config/hardware.yaml" command="load"/>
+    <rosparam file="$(find fs_hardware_interface)/config/controllers.yaml" command="load"/>
+    <rosparam file="$(find fs_hardware_interface)/config/joint_limits.yaml" command="load"/>
+    <rosparam file="$(find fs_hardware_interface)/config/joint_offsets.yaml" command="load"/>
+
+
+    <arg name="model" default="$(find fs_hardware_interface)/urdf/mobile_robot.urdf.xacro"/>
+    <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
+
+    <node machine="at_robot" name="fs_hardware_interface" pkg="fs_hardware_interface" type="fs_hardware_interface_node"
+          output="screen"  />
+
+    <node machine="at_robot" name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" >
+    </node>
+
+    <node machine="at_robot" name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/"
+          args="
+            /fs/controller/state
+            /fs/controller/position/JointSteer
+            /fs/controller/diff_drive/
+
+
+        "/>
+
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find fs_hardware_interface)/config/nav_config.rviz"/>
+
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" >
+    </node>
+
+    <include file="$(find fs_hardware_interface)/launch/move_base.launch" />
+    <include file="$(find fs_hardware_interface)/launch/amcl.launch" />
+
+
+
+</launch>

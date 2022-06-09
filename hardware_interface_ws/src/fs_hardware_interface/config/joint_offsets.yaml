@@ -1,0 +1,11 @@
+fs:
+  joint_offsets:
+    JointBaseWheelBL: 0
+    JointBaseWheelBR: 0
+    JointSteerRight: 0
+    JointSteerLeft: 0
+    JointBaseWheelFL: 0
+    JointBaseWheelFR: 0
+  joint_read_ratio:
+    JointLeftElbowFlex: 0.944444444
+    JointLeftForearmRoll: 1.076923077

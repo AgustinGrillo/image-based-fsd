@@ -1,0 +1,985 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sdf version="1.4">
+  <model name="some track">
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>0.5456064832074609 -0.45885860993376065 0 0 0 0</pose>
+      <name>cone_right_0</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>1.2058946451928227 -0.44259092061318955 0 0 0 0</pose>
+      <name>cone_right_1</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>1.8462565523455987 -0.3158791610961156 0 0 0 0</pose>
+      <name>cone_right_2</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>2.4551261243802767 -0.08944282627658051 0 0 0 0</pose>
+      <name>cone_right_3</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>3.022348377495846 0.22613101339088998 0 0 0 0</pose>
+      <name>cone_right_4</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>3.5385810489900464 0.620887101249452 0 0 0 0</pose>
+      <name>cone_right_5</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>3.9968567595910898 1.0767456319739033 0 0 0 0</pose>
+      <name>cone_right_6</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>4.413884017450792 1.5049585792763076 0 0 0 0</pose>
+      <name>cone_right_7</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>4.837387571227756 1.8125826950286892 0 0 0 0</pose>
+      <name>cone_right_8</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>5.3068601934235655 1.9595061470124564 0 0 0 0</pose>
+      <name>cone_right_9</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>5.819877320713445 1.9676282042649793 0 0 0 0</pose>
+      <name>cone_right_10</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>6.303811697080914 1.829182384310644 0 0 0 0</pose>
+      <name>cone_right_11</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>6.677501635294466 1.5498988169844365 0 0 0 0</pose>
+      <name>cone_right_12</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>6.948446406135672 1.1561583997995557 0 0 0 0</pose>
+      <name>cone_right_13</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>7.130245594376159 0.6777425470140594 0 0 0 0</pose>
+      <name>cone_right_14</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>7.206664436980377 0.16683228925392393 0 0 0 0</pose>
+      <name>cone_right_15</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>7.172176745271697 -0.3462398290659785 0 0 0 0</pose>
+      <name>cone_right_16</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>7.027874995089416 -0.8456869484847873 0 0 0 0</pose>
+      <name>cone_right_17</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>6.778135353807146 -1.3134792045880717 0 0 0 0</pose>
+      <name>cone_right_18</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>6.43682481530975 -1.7195088541264256 0 0 0 0</pose>
+      <name>cone_right_19</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>6.023866609306633 -2.0288480070229897 0 0 0 0</pose>
+      <name>cone_right_20</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>5.561544178993173 -2.2127234131991527 0 0 0 0</pose>
+      <name>cone_right_21</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>5.0681939940556555 -2.265051066441236 0 0 0 0</pose>
+      <name>cone_right_22</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>4.566206799126477 -2.184642251498726 0 0 0 0</pose>
+      <name>cone_right_23</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>4.067908418143249 -1.9850667389844467 0 0 0 0</pose>
+      <name>cone_right_24</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>3.484192974822731 -1.8028277750342239 0 0 0 0</pose>
+      <name>cone_right_25</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>2.7470825966537564 -1.9073172078231235 0 0 0 0</pose>
+      <name>cone_right_26</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>2.1191800385688686 -2.4212307791150547 0 0 0 0</pose>
+      <name>cone_right_27</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>1.7973649492020427 -3.104844454724684 0 0 0 0</pose>
+      <name>cone_right_28</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>1.5741543913362073 -3.633427410084835 0 0 0 0</pose>
+      <name>cone_right_29</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>1.2379331491129555 -3.896081157973365 0 0 0 0</pose>
+      <name>cone_right_30</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>0.7654489003605556 -4.132633005867363 0 0 0 0</pose>
+      <name>cone_right_31</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>0.24301136493267722 -4.463987009997558 0 0 0 0</pose>
+      <name>cone_right_32</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-0.13693885138106562 -5.1300015562304795 0 0 0 0</pose>
+      <name>cone_right_33</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-0.12433864593090588 -5.942980782134854 0 0 0 0</pose>
+      <name>cone_right_34</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>0.20802041270777255 -6.628476398485541 0 0 0 0</pose>
+      <name>cone_right_35</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>0.7804151812215796 -7.112048927235949 0 0 0 0</pose>
+      <name>cone_right_36</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>1.494758312628898 -7.342594785150698 0 0 0 0</pose>
+      <name>cone_right_37</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>2.2277120250991547 -7.313941708037844 0 0 0 0</pose>
+      <name>cone_right_38</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>2.883687169097593 -7.023222759198303 0 0 0 0</pose>
+      <name>cone_right_39</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>3.391840042198688 -6.508287281729905 0 0 0 0</pose>
+      <name>cone_right_40</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>3.755498005441392 -5.898661309648358 0 0 0 0</pose>
+      <name>cone_right_41</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>4.056619348948791 -5.327059766262954 0 0 0 0</pose>
+      <name>cone_right_42</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>4.378523817275573 -5.025008410567977 0 0 0 0</pose>
+      <name>cone_right_43</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>4.7298322353679545 -5.0392873106626475 0 0 0 0</pose>
+      <name>cone_right_44</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>5.22955984500444 -5.151352718827979 0 0 0 0</pose>
+      <name>cone_right_45</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>5.738650956603024 -5.3475772746737835 0 0 0 0</pose>
+      <name>cone_right_46</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>6.080286141864676 -5.641639547801639 0 0 0 0</pose>
+      <name>cone_right_47</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>6.26160515785707 -6.038643930826328 0 0 0 0</pose>
+      <name>cone_right_48</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>6.369585504750976 -6.547196199405659 0 0 0 0</pose>
+      <name>cone_right_49</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>6.4004852734699655 -7.097055363427831 0 0 0 0</pose>
+      <name>cone_right_50</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>6.33263786887288 -7.613296777532562 0 0 0 0</pose>
+      <name>cone_right_51</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>6.155221306788474 -8.059435363374728 0 0 0 0</pose>
+      <name>cone_right_52</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>5.875613266661654 -8.459933798175832 0 0 0 0</pose>
+      <name>cone_right_53</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>5.506138369861098 -8.863554232161913 0 0 0 0</pose>
+      <name>cone_right_54</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>5.0738466779528615 -9.286633320658073 0 0 0 0</pose>
+      <name>cone_right_55</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>4.61614365849807 -9.69342345992484 0 0 0 0</pose>
+      <name>cone_right_56</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>4.1646400719272005 -9.96927439329815 0 0 0 0</pose>
+      <name>cone_right_57</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>3.740880312766757 -10.035912061499928 0 0 0 0</pose>
+      <name>cone_right_58</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>3.3311578378597386 -9.905237356893815 0 0 0 0</pose>
+      <name>cone_right_59</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>2.9224059592686342 -9.618274471106918 0 0 0 0</pose>
+      <name>cone_right_60</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>2.5947389030488264 -9.211484030070826 0 0 0 0</pose>
+      <name>cone_right_61</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>2.2505193561998706 -8.757577432429349 0 0 0 0</pose>
+      <name>cone_right_62</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>1.6796294860141991 -8.397974180417005 0 0 0 0</pose>
+      <name>cone_right_63</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>0.9208425258512882 -8.325272682727089 0 0 0 0</pose>
+      <name>cone_right_64</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>0.2107769366097395 -8.415570412688277 0 0 0 0</pose>
+      <name>cone_right_65</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-0.41296001121357795 -8.487455345299399 0 0 0 0</pose>
+      <name>cone_right_66</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-0.9166483209916548 -8.437162206217451 0 0 0 0</pose>
+      <name>cone_right_67</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-1.2689445915224533 -8.214419488021447 0 0 0 0</pose>
+      <name>cone_right_68</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-1.683120898302488 -7.87977260530645 0 0 0 0</pose>
+      <name>cone_right_69</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-2.3691679313059137 -7.6355491587899 0 0 0 0</pose>
+      <name>cone_right_70</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-2.986047128807216 -7.517420589268996 0 0 0 0</pose>
+      <name>cone_right_71</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-3.10017226932711 -7.228075015219288 0 0 0 0</pose>
+      <name>cone_right_72</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-3.176875098534503 -6.742390078540103 0 0 0 0</pose>
+      <name>cone_right_73</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-3.2257520181388313 -6.173822116496898 0 0 0 0</pose>
+      <name>cone_right_74</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-3.129951341632468 -5.7157304039537165 0 0 0 0</pose>
+      <name>cone_right_75</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-2.856906052109254 -5.364987443702813 0 0 0 0</pose>
+      <name>cone_right_76</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-2.4502488161782883 -5.095410652153637 0 0 0 0</pose>
+      <name>cone_right_77</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-1.9796634962335529 -4.9614223458641185 0 0 0 0</pose>
+      <name>cone_right_78</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-1.428191227449242 -4.7989485654888995 0 0 0 0</pose>
+      <name>cone_right_79</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-0.846746247916777 -4.368065878466941 0 0 0 0</pose>
+      <name>cone_right_80</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-0.4870201034719848 -3.67162034038072 0 0 0 0</pose>
+      <name>cone_right_81</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-0.4807219038941586 -2.8971700714950885 0 0 0 0</pose>
+      <name>cone_right_82</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-0.8167281480581794 -2.2085032531145603 0 0 0 0</pose>
+      <name>cone_right_83</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-1.3942061783787 -1.7363668728425148 0 0 0 0</pose>
+      <name>cone_right_84</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-2.1059099284937304 -1.5165638098566785 0 0 0 0</pose>
+      <name>cone_right_85</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-2.8490392582125454 -1.5308155001748993 0 0 0 0</pose>
+      <name>cone_right_86</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-3.478679634203818 -1.5923590858250192 0 0 0 0</pose>
+      <name>cone_right_87</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-3.858527809501271 -1.4429491110652737 0 0 0 0</pose>
+      <name>cone_right_88</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-4.02155601637582 -1.078399943451833 0 0 0 0</pose>
+      <name>cone_right_89</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-3.9720223825860668 -0.7052060486986893 0 0 0 0</pose>
+      <name>cone_right_90</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-3.692313053726679 -0.5072340666029056 0 0 0 0</pose>
+      <name>cone_right_91</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-3.2274931384944554 -0.256100276171534 0 0 0 0</pose>
+      <name>cone_right_92</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-2.686824364436386 -0.026004664943616584 0 0 0 0</pose>
+      <name>cone_right_93</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-2.1949203218323614 0.06692758537695942 0 0 0 0</pose>
+      <name>cone_right_94</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-1.7744877222165913 -0.02523319167466226 0 0 0 0</pose>
+      <name>cone_right_95</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-1.296995522609946 -0.22359371372142287 0 0 0 0</pose>
+      <name>cone_right_96</name>
+    </include>
+    <include>
+      <uri>model://cone_yellow</uri>
+      <pose>-0.7013015661670496 -0.4077788620240781 0 0 0 0</pose>
+      <name>cone_right_97</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>0.6542295605776837 0.2832337206172448 0 0 0 0</pose>
+      <name>cone_left_0</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>1.1806175893615702 0.3069830053264096 0 0 0 0</pose>
+      <name>cone_left_1</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>1.6945912378009893 0.41862586432174 0 0 0 0</pose>
+      <name>cone_left_2</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>2.1885358040202956 0.6115775736336951 0 0 0 0</pose>
+      <name>cone_left_3</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>2.6534254896593383 0.8791209848532175 0 0 0 0</pose>
+      <name>cone_left_4</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>3.079421775259224 1.2139071357735678 0 0 0 0</pose>
+      <name>cone_left_5</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>3.465385822655569 1.605932407312138 0 0 0 0</pose>
+      <name>cone_left_6</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>3.876562438325861 2.0282037613914325 0 0 0 0</pose>
+      <name>cone_left_7</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>4.390998334584328 2.4152738675282515 0 0 0 0</pose>
+      <name>cone_left_8</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>5.058598836641597 2.667225228801817 0 0 0 0</pose>
+      <name>cone_left_9</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>5.784991293716834 2.716816408336821 0 0 0 0</pose>
+      <name>cone_left_10</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>6.487046404682359 2.5564547142739205 0 0 0 0</pose>
+      <name>cone_left_11</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>7.097180861365277 2.1714849712740936 0 0 0 0</pose>
+      <name>cone_left_12</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>7.547572148571262 1.6073217236092416 0 0 0 0</pose>
+      <name>cone_left_13</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>7.824663885542211 0.9610855139181649 0 0 0 0</pose>
+      <name>cone_left_14</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>7.946333866692097 0.2908852406494472 0 0 0 0</pose>
+      <name>cone_left_15</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>7.921234759754807 -0.3838176275462215 0 0 0 0</pose>
+      <name>cone_left_16</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>7.75174975223611 -1.041914714017126 0 0 0 0</pose>
+      <name>cone_left_17</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>7.44516588570416 -1.656364417913444 0 0 0 0</pose>
+      <name>cone_left_18</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>7.018277320719919 -2.1932313297936012 0 0 0 0</pose>
+      <name>cone_left_19</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>6.484509683918934 -2.620716199961017 0 0 0 0</pose>
+      <name>cone_left_20</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>5.856001804579097 -2.902502150718873 0 0 0 0</pose>
+      <name>cone_left_21</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>5.167744926400961 -3.0084147808295434 0 0 0 0</pose>
+      <name>cone_left_22</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>4.466836652373989 -2.9280301542348335 0 0 0 0</pose>
+      <name>cone_left_23</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>3.8018806251351753 -2.686300803578612 0 0 0 0</pose>
+      <name>cone_left_24</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>3.2614991492182606 -2.519003354091235 0 0 0 0</pose>
+      <name>cone_left_25</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>2.8988771802748543 -2.641795529071135 0 0 0 0</pose>
+      <name>cone_left_26</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>2.632712366687397 -2.967842659682212 0 0 0 0</pose>
+      <name>cone_left_27</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>2.489064948630227 -3.394760150731384 0 0 0 0</pose>
+      <name>cone_left_28</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>2.265077680147801 -3.9251893146881804 0 0 0 0</pose>
+      <name>cone_left_29</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>1.7451541337857808 -4.448554571548652 0 0 0 0</pose>
+      <name>cone_left_30</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>1.1165733785211478 -4.795363419260661 0 0 0 0</pose>
+      <name>cone_left_31</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>0.6459383053400185 -5.096561022026172 0 0 0 0</pose>
+      <name>cone_left_32</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>0.5404481637909697 -5.4519438362688755 0 0 0 0</pose>
+      <name>cone_left_33</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>0.6234650385995082 -5.885625316809073 0 0 0 0</pose>
+      <name>cone_left_34</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>0.8684710047875326 -6.2730822293979 0 0 0 0</pose>
+      <name>cone_left_35</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>1.2391788296929294 -6.51872278181401 0 0 0 0</pose>
+      <name>cone_left_36</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>1.6992576553767735 -6.621013175895246 0 0 0 0</pose>
+      <name>cone_left_37</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>2.175795052852125 -6.565740780483821 0 0 0 0</pose>
+      <name>cone_left_38</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>2.5536020132395594 -6.349766160832694 0 0 0 0</pose>
+      <name>cone_left_39</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>2.8396920160262344 -6.000712107796168 0 0 0 0</pose>
+      <name>cone_left_40</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>3.1066393802464627 -5.522519734559741 0 0 0 0</pose>
+      <name>cone_left_41</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>3.3928936311809657 -4.977820347563425 0 0 0 0</pose>
+      <name>cone_left_42</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>3.8454843318125653 -4.497401637547262 0 0 0 0</pose>
+      <name>cone_left_43</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>4.6076730157087695 -4.299302766869834 0 0 0 0</pose>
+      <name>cone_left_44</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>5.362522394998843 -4.413232836763428 0 0 0 0</pose>
+      <name>cone_left_45</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>6.000711065729101 -4.644850799290346 0 0 0 0</pose>
+      <name>cone_left_46</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>6.546145772951451 -5.053868500433963 0 0 0 0</pose>
+      <name>cone_left_47</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>6.920730662395948 -5.680798196932001 0 0 0 0</pose>
+      <name>cone_left_48</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>7.0991310626557915 -6.373232758012503 0 0 0 0</pose>
+      <name>cone_left_49</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>7.1488642044220745 -7.047770723762127 0 0 0 0</pose>
+      <name>cone_left_50</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>7.077379375462573 -7.701953916909573 0 0 0 0</pose>
+      <name>cone_left_51</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>6.858069570401844 -8.321168659566993 0 0 0 0</pose>
+      <name>cone_left_52</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>6.499299068623126 -8.87648634039791 0 0 0 0</pose>
+      <name>cone_left_53</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>6.062990025368412 -9.365964655778665 0 0 0 0</pose>
+      <name>cone_left_54</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>5.599051597973327 -9.822039514109637 0 0 0 0</pose>
+      <name>cone_left_55</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>5.114780899727347 -10.253656359404385 0 0 0 0</pose>
+      <name>cone_left_56</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>4.562083224760139 -10.605308150473203 0 0 0 0</pose>
+      <name>cone_left_57</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>3.8964093538207614 -10.769608672769753 0 0 0 0</pose>
+      <name>cone_left_58</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>3.162306581019276 -10.635983039784515 0 0 0 0</pose>
+      <name>cone_left_59</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>2.5185056241059454 -10.250227411803824 0 0 0 0</pose>
+      <name>cone_left_60</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>2.0253590832549335 -9.699650621319629 0 0 0 0</pose>
+      <name>cone_left_61</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>1.653438545827401 -9.211443608614529 0 0 0 0</pose>
+      <name>cone_left_62</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>1.308596781637095 -9.049767654059242 0 0 0 0</pose>
+      <name>cone_left_63</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>0.8903991475590005 -9.074654561823557 0 0 0 0</pose>
+      <name>cone_left_64</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>0.3113484153868977 -9.158796742722794 0 0 0 0</pose>
+      <name>cone_left_65</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-0.32700595068811444 -9.232513664814846 0 0 0 0</pose>
+      <name>cone_left_66</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-0.9801737482767284 -9.184467043675532 0 0 0 0</pose>
+      <name>cone_left_67</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-1.6223455773494948 -8.875938756989838 0 0 0 0</pose>
+      <name>cone_left_68</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-2.147967735984128 -8.468344960669306 0 0 0 0</pose>
+      <name>cone_left_69</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-2.597313584114929 -8.350006688041534 0 0 0 0</pose>
+      <name>cone_left_70</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-3.123698322204588 -8.25468048167891 0 0 0 0</pose>
+      <name>cone_left_71</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-3.6863945343009896 -7.695882086616134 0 0 0 0</pose>
+      <name>cone_left_72</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-3.9070616985505024 -6.913642900873269 0 0 0 0</pose>
+      <name>cone_left_73</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-3.972578054091859 -6.242748686284515 0 0 0 0</pose>
+      <name>cone_left_74</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-3.868197479548541 -5.583470660070698 0 0 0 0</pose>
+      <name>cone_left_75</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-3.4799314971167723 -4.9474478708798495 0 0 0 0</pose>
+      <name>cone_left_76</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-2.8931180941524857 -4.49012823656021 0 0 0 0</pose>
+      <name>cone_left_77</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-2.2123157711440284 -4.2484195976373105 0 0 0 0</pose>
+      <name>cone_left_78</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-1.6403396691098977 -4.079578675445568 0 0 0 0</pose>
+      <name>cone_left_79</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-1.3163818298519394 -3.783307449557685 0 0 0 0</pose>
+      <name>cone_left_80</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-1.170275143551782 -3.362326709334824 0 0 0 0</pose>
+      <name>cone_left_81</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-1.2299878875279273 -2.9303436418383746 0 0 0 0</pose>
+      <name>cone_left_82</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-1.473116329708077 -2.571345581117153 0 0 0 0</pose>
+      <name>cone_left_83</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-1.8424537268514969 -2.3376772214048254 0 0 0 0</pose>
+      <name>cone_left_84</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-2.3018510857536976 -2.2405161997910064 0 0 0 0</pose>
+      <name>cone_left_85</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-2.8169614694651677 -2.28012919647911 0 0 0 0</pose>
+      <name>cone_left_86</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-3.405036461478727 -2.3387347841907835 0 0 0 0</pose>
+      <name>cone_left_87</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-4.081622124444647 -2.159000035678842 0 0 0 0</pose>
+      <name>cone_left_88</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-4.634029435978556 -1.5112697971955773 0 0 0 0</pose>
+      <name>cone_left_89</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-4.721615365892754 -0.7299115010803068 0 0 0 0</pose>
+      <name>cone_left_90</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-4.27411774175815 -0.033944192440566845 0 0 0 0</pose>
+      <name>cone_left_91</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-3.611999359394718 0.3878368062278246 0 0 0 0</pose>
+      <name>cone_left_92</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-2.9842577136218735 0.6624961722325657 0 0 0 0</pose>
+      <name>cone_left_93</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-2.345729094422545 0.801608954481854 0 0 0 0</pose>
+      <name>cone_left_94</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-1.6554774653521591 0.7152643159248311 0 0 0 0</pose>
+      <name>cone_left_95</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-1.021125785742097 0.47382716944774605 0 0 0 0</pose>
+      <name>cone_left_96</name>
+    </include>
+    <include>
+      <uri>model://cone_blue</uri>
+      <pose>-0.48108715359792087 0.30916298533652453 0 0 0 0</pose>
+      <name>cone_left_97</name>
+    </include>
+  </model>
+</sdf>

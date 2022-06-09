@@ -1,0 +1,36 @@
+# Models Summary.
+
+*MODEL: v1  (07/07/2020)
+INFO: First created model. No normalization, no parameters tunning.
+
+*MODEL: v2 (02/08/2020)
+INFO: input is a cropped and pixelated image of the blue channel. Same NN as v1.
+
+*MODEL: v4 (07/08/2020)
+INFO: input is a cropped and pixelated image of the blue channel. input is normalized between -0.5 and 0.5. Added dropout between layers. NO IMPROVEMENT - BAD ARQUITECTURE. COMMANDS KEEP CONSTANT.
+
+*MODEL: v6 (09/08/2020)
+INFO: input is a cropped and pixelated image of the blue channel. input is normalized between 0 and 1. Added dropout between all layers. NO IMPROVEMENT. COMMANDS KEEP CONSTANT.
+
+*MODEL: v8 (09/08/2020)
+INFO: input is a cropped and pixelated image of the blue channel. input is normalized between 0 and 1. Added dropout between all layers. And constrained the weights with maxnorm. NO IMPROVEMENT. COMMANDS KEEP CONSTANT.
+
+*MODEL: v10 (16/08/2020)
+INFO: model used for various arquitecture tests. used with small dataset.
+
+*MODEL: v12 (06/09/2020)
+INFO: model with double input: blue and green channels fed in two separate branches. Improvement.
+
+*MODEL: v13_MobileNet (07/09/2020)
+INFO: arquitecture with MobileNetV2 as base net. (IN PROGRESS)
+
+------ NOTE: VALIDATION CURVES IN PREVIOUS MODELS WITH SKIP-LINE DEFINITION, ARE NOT VALID (CODE ERROR) ------------- 
+
+*MODEL: v13 (09/09/2020)
+INFO: model with double input: blue and red channels fed in two separate branches. Problem with the blue cones.
+
+*MODEL: vS1 (20/09/2020)
+INFO: (S -> sequence) First model with sequence of images fed to it. model with double input: blue and red channels fed in two separate branches.
+
+*MODEL: vS13 (11/10/2020)
+INFO: (S -> sequence) Input of model is a sequence of images. model with double input: blue and red channels fed in two separate branches. (model subversions linked with standard v13).

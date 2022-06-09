@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<launch>
+
+
+    <arg name="debug" default="false" />
+    <arg unless="$(arg debug)" name="launch_prefix" value="" />
+    <arg     if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args" />
+    <arg name="robot_name" default="fs"/>
+
+
+    <rosparam file="$(find fs_hardware_interface)/config/hardware.yaml" command="load"/>
+    <rosparam file="$(find fs_hardware_interface)/config/controllers.yaml" command="load"/>
+    <rosparam file="$(find fs_hardware_interface)/config/joint_limits.yaml" command="load"/>
+    <rosparam file="$(find fs_hardware_interface)/config/joint_offsets.yaml" command="load"/>
+
+
+    <arg name="model" default="$(find fs_hardware_interface)/urdf/new_fs_robot.urdf.xacro"/>
+    <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
+
+    <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui">
+        <!--<param name="use_gui" value="TRUE"/>-->
+    </node>
+
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" >
+    </node>
+
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find fs_hardware_interface)/config/rviz_config.rviz"/>
+
+
+
+</launch>

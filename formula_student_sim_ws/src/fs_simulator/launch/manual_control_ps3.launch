@@ -1,0 +1,49 @@
+<launch>
+
+  <arg name="model" default="$(find fs_simulator)/urdf/fs.urdf.xacro"/>
+  <arg name="rvizconfig" default="$(find fs_simulator)/config/default_ps3_manual.rviz" />
+  <arg name="world_name" default="$(find fs_simulator)/worlds/track_def.world"/>  <!--track_def.world   small_track.world-->
+
+
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" />
+
+  <rosparam command="load"
+            file="$(find fs_simulator)/config/joints.yaml"
+            ns="fs/joint_state_controller" />
+
+  <rosparam command="load"
+            file="$(find fs_simulator)/config/diffdrive.yaml"
+            ns="fs/motor_controller" />
+
+  <rosparam command="load"
+            file="$(find fs_simulator)/config/base_to_right_front_steer.yaml"
+            ns= "fs/right_front_steer"/>
+
+  <rosparam command="load"
+            file="$(find fs_simulator)/config/base_to_left_front_steer.yaml"
+            ns= "fs/left_front_steer" />
+
+  <node name="fs_controller_spawner" pkg="controller_manager" type="spawner"
+    args="fs/joint_state_controller
+          fs/left_front_steer
+          fs/right_front_steer
+          fs/motor_controller
+          --shutdown-timeout 3"/>
+
+
+  <include file="$(find fs_simulator)/launch/gazebo_speed_unlocked.launch">
+      <arg name="model" value="$(arg model)" />
+      <arg name="gui" value="false"/>
+      <arg name="world_name" value="$(arg world_name)"/>
+  </include>
+
+  <node name="front_steer" pkg="fs_simulator" type="front_steer_akermann.py" output="screen" />
+
+
+  <include file="$(find teleop_twist_joy)/launch/teleop.launch">
+  </include>
+
+
+
+</launch>

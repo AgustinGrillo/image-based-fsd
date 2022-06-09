@@ -1,0 +1,11 @@
+type: position_controllers/JointPositionController
+joint: base_to_left_front_steer
+
+/gazebo_ros_control:
+  pid_gains:
+    base_to_left_front_steer:
+      p: 3000
+      i: 20
+      d: 150
+      i_clamp_min: -500
+      i_clamp_max: 500

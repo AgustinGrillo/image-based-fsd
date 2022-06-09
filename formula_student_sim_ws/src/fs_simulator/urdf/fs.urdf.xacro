@@ -1,0 +1,542 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="fs">
+
+<!--    *Constants*    -->
+
+<!-- These 2 values should always be modified in parallel with the ones in scripts/front_steer_akermann.py -->
+<xacro:property name="axle_track" value="1.186" />
+<xacro:property name="wheel_base" value="1.729" />
+
+<xacro:property name="Chasis_mass" value="200" />
+<xacro:property name="M_PI" value="3.1415926535897931" />
+        <!--80 degrees fov, 21mm camera -->
+<xacro:property name="Camera_field_of_view" value="80" />
+<xacro:property name="Camera_image_width" value="640" />
+<xacro:property name="Camera_image_height" value="480" />
+        <!--In degrees measured from vertical -->
+<xacro:property name="Camera_angle" value="10" />
+        <!--Measured from base link, not from floor -->
+<xacro:property name="Camera_height" value="1.17" />
+<xacro:property name="Wheel_MU" value="0.9" />
+
+<!--    *Colours*   -->
+
+  <material name="grey">
+    <color rgba="0.2 0.2 0.3 1"/>
+  </material>
+
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+
+  <material name="red">
+    <color rgba="0.9 0.2 0.2 1"/>
+  </material>
+
+
+<!--    Base link (chassis) since Gazebo 9 this has no mass of its own, see dummy link -->
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <!--box size="1.5 0.7 0.5"/-->
+          <mesh filename="package://fs_simulator/meshes/Chasis.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.77 0 0.40"/>
+      <geometry>
+        <box size="2.5 0.7 0.8"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="base_link">
+      <sensor type="contact" name="lside_bump_link">
+        <always_on>true</always_on>
+        <update_rate>50</update_rate>
+        <contact>
+          <collision>base_link_collision</collision>
+          <!-- we have to add "_collision" to the colision link name due to a funny
+          behaviour in urdf>sdf parser, Issue #113 in sdf bug tracker, major priority -->
+        </contact>
+        <plugin name="lside_bumper_plugin" filename="libgazebo_ros_bumper.so">
+          <bumperTopicName>/fs/bumper</bumperTopicName>
+          <frameName>world</frameName>
+        </plugin>
+      </sensor>
+  </gazebo>
+
+<!-- Dummy node, inertia for base link (chasis+batterypack+Motors) -->
+
+<joint name="dummy_joint" type="fixed">
+  <axis xyz="0 1 0" />
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="dummy_link"/>
+</joint>
+
+<link name="dummy_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-1.1 0 0.2"/>
+      <mass value="${Chasis_mass}"/>
+      <inertia ixx="11" ixy="0.0" ixz="0.0" iyy="106" iyz="0.0" izz="112"/>
+    </inertial>
+</link>
+
+
+<!--    *Rear Wheels*   -->
+
+<xacro:macro name="rWheel" params="prefix reflect">
+  <link name="rear_${prefix}_wheel">
+    <visual>
+        <origin rpy="1.57075 0 0" xyz="0 0 0"/>
+        <geometry>
+          <!--cylinder length="0.164" radius="0.254"/-->
+          <mesh filename="package://fs_simulator/meshes/tyre.dae"/>
+        </geometry>
+      <origin rpy="0 1.57075 0" xyz="0 0 -0.2"/>
+    </visual>
+    <collision>
+      <origin rpy="1.57075 0 0" xyz="0 0 0"/>
+      <geometry>
+          <cylinder length="0.164" radius="0.254"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="15.0"/>
+      <inertia ixx="0.27" ixy="0.0" ixz="0.0" iyy="0.48" iyz="0.0" izz="0.27"/>
+    </inertial>
+  </link>
+
+  <gazebo reference="rear_${prefix}_wheel">
+      <mu1 value="${Wheel_MU}"/>
+      <mu2 value="1.0"/>
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+  </gazebo>
+
+  <joint name="base_to_${prefix}_wheel" type="continuous">
+    <limit effort="2000" velocity="1000"/>
+    <axis rpy="0 0 0" xyz="0 1 0"/>
+    <parent link="base_link"/>
+    <child link="rear_${prefix}_wheel"/>
+    <origin rpy="0 0 0" xyz="${-wheel_base} ${reflect * axle_track /2} 0.2"/>
+     <dynamics damping="0.3" friction="0.1"/>
+  </joint>
+
+  <transmission name="${prefix}_back_motor_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="${prefix}_back_motor_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="base_to_${prefix}_wheel">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+ </xacro:macro>
+<xacro:rWheel prefix="right" reflect="1" />
+<xacro:rWheel prefix="left" reflect="-1" />
+
+
+<!--    Steer mechanism   -->
+
+<xacro:macro name="steerMech" params="prefix reflect">
+
+<link name="steer_${prefix}">
+    <inertial>
+        <mass value="2.0" />
+        <inertia ixx="0.005" ixy="0.0" ixz="0.0"
+            iyy="0.005" iyz="0.0"
+            izz="0.005" />
+    </inertial>
+</link>
+
+<joint name="base_to_${prefix}_front_steer" type="revolute">
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="steer_${prefix}"/>
+    <origin xyz="0 ${reflect * axle_track /2} 0"/>
+    <dynamics damping="0.7" friction="0.7"/>
+    <limit effort="173" lower="${-45*M_PI/180}" upper="${45*M_PI/180}" velocity="${M_PI*2*10}"/>
+</joint>
+
+<transmission name="${prefix}_front_steer_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="${prefix}_front_steer_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="base_to_${prefix}_front_steer">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+</xacro:macro>
+<xacro:steerMech prefix="right" reflect="1" />
+<xacro:steerMech prefix="left" reflect="-1" />
+
+
+<!--  *Front Wheels*   -->
+
+<xacro:macro name="fWheel" params="prefix reflect">
+
+<link name="${prefix}_front_wheel">
+  <visual>
+      <origin rpy="1.57075 0 0" xyz="0 0 0"/>
+      <geometry>
+        <!--cylinder length="0.164" radius="0.254"/-->
+        <mesh filename="package://fs_simulator/meshes/tyre.dae"/>
+      </geometry>
+  </visual>
+  <collision>
+    <origin rpy="1.57075 0 0" xyz="0 0 0"/>
+    <geometry>
+        <cylinder length="0.164" radius="0.254"/>
+    </geometry>
+  </collision>
+  <inertial>
+    <mass value="15.0"/>
+    <inertia ixx="0.27" ixy="0.0" ixz="0.0" iyy="0.48" iyz="0.0" izz="0.27"/>
+  </inertial>
+</link>
+
+<gazebo reference="${prefix}_front_wheel">
+    <mu1 value="${Wheel_MU}"/>
+    <mu2 value="1.0"/>
+    <kp value="10000000.0" />
+    <kd value="1.0" />
+</gazebo>
+
+<joint name="base_to_${prefix}_front_wheel" type="continuous">
+  <axis  effort="1000.0" rpy="0 0 0" xyz="0 1 0"/>
+  <parent link="steer_${prefix}"/>
+  <child link="${prefix}_front_wheel"/>
+  <origin rpy="0 0 0" xyz="0 0 0.2"/>
+   <dynamics damping="0.3" friction="0.1"/>
+</joint>
+
+<transmission name="${prefix}_front_wheel_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="${prefix}_front_wheel_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="base_to_${prefix}_front_wheel">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+</xacro:macro>
+<xacro:fWheel prefix="right" reflect="1" />
+<xacro:fWheel prefix="left" reflect="-1" />
+
+
+<!--    *Sensors*  -->
+
+<!--    Camera 2d  -->
+
+<joint name="camera_joint" type="fixed">
+  <axis xyz="0 1 0"/>
+  <origin xyz="-1.07 0 ${Camera_height}" rpy="0 ${Camera_angle*M_PI/180} 0"/>
+  <parent link="base_link"/>
+  <child link="camera_link"/>
+</joint>
+
+<link name="camera_link">
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+  <box size="0.05 0.1 0.1"/>
+    </geometry>
+  </collision>
+
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+  <box size="0.05 0.1 0.1"/>
+    </geometry>
+    <material name="white"/>
+  </visual>
+
+  <inertial>
+    <mass value="1e-5" />
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+  </inertial>
+</link>
+
+  <gazebo reference="camera_link">
+    <material>Gazebo/DarkGrey</material>
+    <sensor type="camera" name="camera2d_1">
+      <update_rate>10.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>${Camera_field_of_view*M_PI/180}</horizontal_fov>
+        <image>
+          <width>${Camera_image_width}</width>
+          <height>${Camera_image_height}</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.5</near>
+          <far>50</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise is sampled independently per pixel on each frame.
+               That pixel's noise value is added to each of its color
+               channels, which at that point lie in the range [0,1]. -->
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>fs/c1</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
+<!--    Camera 3d  -->
+
+<joint name="camera3d_joint" type="fixed">
+  <axis xyz="0 1 0"/>
+  <origin xyz="-1.07 0 ${Camera_height}" rpy="0 ${Camera_angle*M_PI/180} 0"/>
+  <parent link="base_link"/>
+  <child link="camera3d_link"/>
+</joint>
+
+<link name="camera3d_link">
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+  <box size="0.05 0.1 0.1"/>
+    </geometry>
+  </collision>
+
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+  <box size="0.05 0.1 0.1"/>
+    </geometry>
+    <material name="white"/>
+  </visual>
+
+  <inertial>
+    <mass value="1e-5" />
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+  </inertial>
+</link>
+
+  <gazebo reference="camera3d_link">
+    <material>Gazebo/DarkGrey</material>
+    <sensor type="depth" name="camera3d_1">
+      <update_rate>10.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>${Camera_field_of_view*M_PI/180}</horizontal_fov>
+        <image>
+          <width>${Camera_image_width}</width>
+          <height>${Camera_image_height}</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.5</near>
+          <far>50</far>
+        </clip>
+      </camera>
+        <plugin name="camera_plugin" filename="libgazebo_ros_openni_kinect.so">
+          <baseline>0.2</baseline>
+          <alwaysOn>true</alwaysOn>
+          <!-- Keep this zero, update_rate in the parent <sensor> tag
+            will control the frame rate. -->
+          <updateRate>0.0</updateRate>
+          <cameraName>camera_ir</cameraName>
+          <imageTopicName>/camera/color/image_raw</imageTopicName>
+          <cameraInfoTopicName>/camera/color/camera_info</cameraInfoTopicName>
+          <depthImageTopicName>/camera/depth/image_raw</depthImageTopicName>
+          <depthImageCameraInfoTopicName>/camera/depth/camera_info</depthImageCameraInfoTopicName>
+          <pointCloudTopicName>/camera/depth/points</pointCloudTopicName>
+          <frameName>camera3d_link</frameName>
+          <pointCloudCutoff>0.5</pointCloudCutoff>
+          <pointCloudCutoffMax>50.0</pointCloudCutoffMax>
+          <distortionK1>0</distortionK1>
+          <distortionK2>0</distortionK2>
+          <distortionK3>0</distortionK3>
+          <distortionT1>0</distortionT1>
+          <distortionT2>0</distortionT2>
+          <CxPrime>0</CxPrime>
+          <Cx>0</Cx>
+          <Cy>0</Cy>
+          <focalLength>0</focalLength>
+          <hackBaseline>0</hackBaseline>
+        </plugin>
+    </sensor>
+  </gazebo>
+
+
+<!--    LiDar Hokuyo   -->
+
+<joint name="hokuyo_joint" type="fixed">
+  <axis xyz="0 1 0" />
+  <origin xyz="0.7 0 0.1" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="hokuyo_link"/>
+</joint>
+
+<link name="hokuyo_link">
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+  <box size="0.05 0.05 0.1"/>
+    </geometry>
+  </collision>
+
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fs_simulator/meshes/hokuyo.dae"/>
+    </geometry>
+  </visual>
+
+  <inertial>
+    <mass value="1e-5" />
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+  </inertial>
+</link>
+
+  <gazebo reference="hokuyo_link">
+    <sensor type="ray" name="head_hokuyo_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>20</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.570796</min_angle>
+            <max_angle>1.570796</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.1</min>
+          <max>30.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise parameters based on published spec for Hokuyo laser
+               achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+               stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+               reading. -->
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/fs/laser/scan</topicName>
+        <frameName>hokuyo_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
+<gazebo reference="hokuyo_link">
+  <sensor type="ray" name="head_hokuyo_sensor">
+    <pose>0 0 0 0 0 0</pose>
+    <visualize>false</visualize>
+    <update_rate>20</update_rate>
+    <ray>
+      <scan>
+        <horizontal>
+          <samples>720</samples>
+          <resolution>1</resolution>
+          <min_angle>-1.570796</min_angle>
+          <max_angle>1.570796</max_angle>
+        </horizontal>
+      </scan>
+      <range>
+        <min>0.1</min>
+        <max>30.0</max>
+        <resolution>0.01</resolution>
+      </range>
+      <noise>
+        <type>gaussian</type>
+        <!-- Noise parameters based on published spec for Hokuyo laser
+             achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+             stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+             reading. -->
+        <mean>0.0</mean>
+        <stddev>0.01</stddev>
+      </noise>
+    </ray>
+    <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+      <topicName>/fs/laser/scan</topicName>
+      <frameName>hokuyo_link</frameName>
+    </plugin>
+  </sensor>
+</gazebo>
+
+<!--    IMU   -->
+
+<joint name="IMU_joint" type="fixed">
+  <axis xyz="1 0 0"/>
+  <origin xyz="-.5 0 0.1"/>
+  <parent link="base_link"/>
+  <child link="IMU_link"/>
+</joint>
+
+
+<link name="IMU_link">
+<inertial>
+  <mass value="0.05"/>
+  <origin rpy="0 0 0" xyz="0 0 0"/>
+  <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+</inertial>
+<visual>
+  <origin rpy="0 0 0" xyz="0 0 0"/>
+  <geometry>
+    <box size="0.01 0.01 0.01"/>
+  </geometry>
+</visual>
+<collision>
+  <origin rpy="0 0 0" xyz="0 0 0"/>
+  <geometry>
+    <box size="0.01 0.01 0.01"/>
+  </geometry>
+</collision>
+</link>
+
+
+<gazebo>
+  <plugin name="imu_plugin" filename="libgazebo_ros_imu.so">
+    <alwaysOn>true</alwaysOn>
+    <bodyName>IMU_link</bodyName>
+    <topicName>fs/imu_data</topicName>
+    <serviceName>imu_service</serviceName>
+    <gaussianNoise>8.0e-03</gaussianNoise>
+    <updateRate>50.0</updateRate>
+  </plugin>
+</gazebo>
+
+
+<!--    Gazebo Plugin  -->
+
+    <gazebo>
+      <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+        <robotNamespace>/</robotNamespace>
+        <!--    TODO: (gtorre) research why we have to use lagacy mode   -->
+        <legacyModeNS>true</legacyModeNS>
+      </plugin>
+    </gazebo>
+</robot>

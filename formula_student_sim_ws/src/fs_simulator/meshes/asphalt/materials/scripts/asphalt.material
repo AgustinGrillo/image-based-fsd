@@ -1,0 +1,18 @@
+material asphalt/Image
+{
+  technique
+  {
+    pass
+    {
+      ambient 0.5 0.5 0.5 1.000000
+      diffuse 0.4 0.4 0.4 1.000000
+      specular 0.02 0.02 0.02 1.000000
+
+      texture_unit
+      {
+        texture original/rgb_floor.png
+        scale 0.0200850803973 0.0455151196274
+      }
+    }
+  }
+}

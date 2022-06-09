@@ -1,0 +1,41 @@
+# In this folder we store the generated data with record_data.launch.
+
+# Each data generation is stored in different folders (data_#) to keep an order of different recordings.
+
+———————————————————————————————————————————————————————————————————————————————————————————————
+
+# TO RECORD DATA:
+
+In the simulator workspace (fss_ws):
+
+- Run the simulator. 
+  Eg. to drive with ps3 joystick:
+  roslaunch fs_simulator manual_control_ps3.launch
+
+- Run in a new terminal:
+  roslaunch imitation_learning record_data.launch
+
+- Drive simulator to obtain new data
+
+- End recording with ctr+C in the last terminal
+
+———————————————————————————————————————————————————————————————————————————————————————————————
+
+# AFTER RECORDING DATA:
+
+- New .bag file present in imitation_learning/data. Cut this file into a new imitation_learning/data/data_# folder.
+
+- In terminal, move to imitation_learning/scripts folder (ROS workspace must be sourced and Conda environment must be activated)
+
+- Run the following command for data conversion:
+  python rosbag_to_csv.py -o /path/to/output/data_# -i /path/to/data/data_#
+  Example:
+  python rosbag_to_csv.py -o /home/agus/fs_ws/imitation_learning/output/data_3 -i /home/agus/ros/fs_ws/src/imitation_learning/data/data_3
+
+- If /data_# was not specified ⇒ after conversion (To keep an ORDER with new generated data):
+	1) cut the .bag files in the "data" folder into a new "data/data_#" folder. Being # the next number.
+	2) cut the generated files in the "output" folder (all except the README and the data_# folders) into a new "output/data_#" folder.
+
+-Data in "output" folder is the one used for training.
+
+———————————————————————————————————————————————————————————————————————————————————————————————

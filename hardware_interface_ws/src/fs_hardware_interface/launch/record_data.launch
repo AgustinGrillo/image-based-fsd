@@ -1,0 +1,13 @@
+<launch>
+
+  <machine name="at_robot_server" address="192.168.0.102" user="manuel" env-loader="/home/manuel/Documents/fss_clion_ws/at_robot_server_ros_env.sh"/>
+  <machine name="at_robot" address="192.168.0.100" user="pablo" env-loader="/home/pablo/Documents/hardware_ws/at_robot_ros_env.sh"/>
+
+  <arg name="record" default="true" />
+
+  <!-- Record data  -->
+  <node machine="at_robot" pkg="rosbag" type="record" name="rosbag_record_all"
+  args="--split --size 1024 --lz4 -o /home/pablo/Documents/hardware_ws/src/fs_hardware_interface/data/session fs/cmd_vel_stamped /csi_cam_0/image_raw /csi_cam_0/image_rect_color"
+  if="$(arg record)" />
+
+</launch>

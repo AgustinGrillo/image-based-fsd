@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+
+
+    <arg name="debug" default="false" />
+    <arg unless="$(arg debug)" name="launch_prefix" value="" />
+    <arg     if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args" />
+    <arg name="robot_name" default="prototype"/>
+
+    <arg name="model" default="$(find fs_simulator)/urdf/prototype.urdf.xacro"/>
+    <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
+
+    <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"> </node>
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" > </node>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find fs_simulator)/config/default_ps3_manual.rviz"/>
+
+</launch>

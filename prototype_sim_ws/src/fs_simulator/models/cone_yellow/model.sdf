@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="cone_yellow">
+    <link name="link">
+    <collision name="collision"><geometry><box><size> 0.05 0.05 0.01</size>
+             </box></geometry></collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://cup.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+            <script>
+              <uri>model://cone_yellow/materials/scripts</uri>
+              <uri>model://cone_yellow/materials/textures</uri>
+              <name>cone_yellow/Image</name>
+            </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

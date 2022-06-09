@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="cone_orange_big">
+    <link name="link">
+    <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+             </box></geometry></collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://BigOrangeCone.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+            <script>
+              <uri>model://cone_orange_big/materials/scripts</uri>
+              <uri>model://cone_orange_big/materials/textures</uri>
+              <name>cone_orange_big/Image</name>
+            </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

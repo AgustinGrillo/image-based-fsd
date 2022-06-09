@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+
+<sdf version="1.5">
+  <world name="default">
+
+    <physics type="ode">
+      <real_time_update_rate>2000</real_time_update_rate>
+    </physics>
+
+    <light type="directional" name="sun1">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0.001 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>1</constant>
+        <linear>0</linear>
+        <quadratic>0</quadratic>
+      </attenuation>
+    </light>
+
+    <light type="directional" name="sun2">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0.001 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>1</constant>
+        <linear>0</linear>
+        <quadratic>0</quadratic>
+      </attenuation>
+    </light>
+
+    <scene>
+      <ambient>255 255 255 255</ambient>
+      <background>255 255 255 255 </background>
+      <shadows>false</shadows>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+      <fog> </fog>
+      <origin_visual> 0 </origin_visual>
+      <grid> 0 </grid>
+    </scene>
+
+
+    <!-- Te following must be commented out in most cases.
+         The objective is to avoid undesired shadows in particular cases. -->
+    <!-- EXTRA LIGHTS -->
+     <light type="directional" name="extra_sun_11">
+    <cast_shadows>false</cast_shadows>
+      <pose>0 0 7 1.77 0.0 0.0</pose>
+    <diffuse>0.6 0.6 0.6 1</diffuse>
+    <specular>0.2 0.2 0.2 1</specular>
+    <attenuation>
+      <range>1000</range>
+      <constant>1</constant>
+      <linear>0</linear>
+      <quadratic>0</quadratic>
+    </attenuation>
+  </light>
+  <light type="directional" name="extra_sun_12">
+    <cast_shadows>false</cast_shadows>
+      <pose>0 0 7 1.77 0.0 0.785</pose>
+    <diffuse>0.6 0.6 0.6 1</diffuse>
+    <specular>0.2 0.2 0.2 1</specular>
+    <attenuation>
+      <range>1000</range>
+      <constant>1</constant>
+      <linear>0</linear>
+      <quadratic>0</quadratic>
+    </attenuation>
+  </light>
+  <light type="directional" name="extra_sun_21">
+    <cast_shadows>false</cast_shadows>
+      <pose>0 0 7 1.77 0.0 1.57</pose>
+    <diffuse>0.6 0.6 0.6 1</diffuse>
+    <specular>0.2 0.2 0.2 1</specular>
+    <attenuation>
+      <range>1000</range>
+      <constant>1</constant>
+      <linear>0</linear>
+      <quadratic>0</quadratic>
+    </attenuation>
+  </light>
+  <light type="directional" name="extra_sun_22">
+    <cast_shadows>false</cast_shadows>
+      <pose>0 0 7 1.77 0.0 2.356</pose>
+    <diffuse>0.6 0.6 0.6 1</diffuse>
+    <specular>0.2 0.2 0.2 1</specular>
+    <attenuation>
+      <range>1000</range>
+      <constant>1</constant>
+      <linear>0</linear>
+      <quadratic>0</quadratic>
+    </attenuation>
+  </light>
+  <light type="directional" name="extra_sun_31">
+    <cast_shadows>false</cast_shadows>
+      <pose>0 0 7 1.77 0.0 3.142</pose>
+    <diffuse>0.6 0.6 0.6 1</diffuse>
+    <specular>0.2 0.2 0.2 1</specular>
+    <attenuation>
+      <range>1000</range>
+      <constant>1</constant>
+      <linear>0</linear>
+      <quadratic>0</quadratic>
+    </attenuation>
+  </light>
+  <light type="directional" name="extra_sun_32">
+    <cast_shadows>false</cast_shadows>
+      <pose>0 0 7 1.77 0.0 3.927</pose>
+    <diffuse>0.6 0.6 0.6 1</diffuse>
+    <specular>0.2 0.2 0.2 1</specular>
+    <attenuation>
+      <range>1000</range>
+      <constant>1</constant>
+      <linear>0</linear>
+      <quadratic>0</quadratic>
+    </attenuation>
+  </light>
+  <light type="directional" name="extra_sun_41">
+    <cast_shadows>false</cast_shadows>
+      <pose>0 0 7 1.77 0.0 4.7123</pose>
+    <diffuse>0.6 0.6 0.6 1</diffuse>
+    <specular>0.2 0.2 0.2 1</specular>
+    <attenuation>
+      <range>1000</range>
+      <constant>1</constant>
+      <linear>0</linear>
+      <quadratic>0</quadratic>
+    </attenuation>
+  </light>
+  <light type="directional" name="extra_sun_42">
+    <cast_shadows>false</cast_shadows>
+      <pose>0 0 7 1.77 0.0 5.498</pose>
+    <diffuse>0.6 0.6 0.6 1</diffuse>
+    <specular>0.2 0.2 0.2 1</specular>
+    <attenuation>
+      <range>1000</range>
+      <constant>1</constant>
+      <linear>0</linear>
+      <quadratic>0</quadratic>
+    </attenuation>
+  </light>
+  <!-- EXTRA LIGHTS -->
+
+    <!-- MODELS -->
+    <include>
+      <uri>model://asphalt</uri>
+      <pose>0.0 0.0 0.0 0 0 0</pose>
+    </include>
+
+    <include>
+         <uri>model://track</uri>
+         <static>true</static>
+         <pose>0 0 -0.005 0 0 0</pose>
+         <name>track</name>
+     </include>
+
+  </world>
+</sdf>

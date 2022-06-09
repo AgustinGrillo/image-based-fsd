@@ -1,0 +1,11 @@
+# Weights are saved in different folders that represent the different Neural Network models used.
+
+# In each folder, weights are stored with the following name:
+weights-improvement-{model and trained version}-{epoch}-{validation loss}.hdf5
+
+Example:
+weights-improvement-v1.0-01-4.04.hdf5
+model v1
+trained version 0
+epoch 1
+validation loss 4.04

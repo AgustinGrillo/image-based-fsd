@@ -1,0 +1,28 @@
+fs:
+  hardware_interface:
+    loop_hz: 10 #hz
+    joints:
+      - JointBaseWheelBR
+      - JointBaseWheelBL
+      - JointSteerRight
+      - JointSteerLeft
+      - JointBaseWheelFR
+      - JointBaseWheelFL
+
+  joint_actuator_type:
+    JointBaseWheelBL: 2
+    JointBaseWheelBR: 2
+    JointSteerRight: 3
+    JointBaseWheelFR: 4
+    JointBaseWheelFL: 4
+    JointSteerLeft: 5
+
+
+
+#ACTUATOR_TYPE_VELOCITY_MOTOR 0    //PID Runs in ROS
+#ACTUATOR_TYPE_POSITION_MOTOR 1    //PID Runs in ROS
+#ACTUATOR_TYPE_VELOCITY_SERVO 2    //PID Runs inside MOTOR
+#ACTUATOR_TYPE_POSITION_SERVO 3    //PID Runs inside MOTOR
+#ACTUATOR_TYPE_NONE 4
+#ACTUATOR_TYPE_NONE_SERVO 5
+

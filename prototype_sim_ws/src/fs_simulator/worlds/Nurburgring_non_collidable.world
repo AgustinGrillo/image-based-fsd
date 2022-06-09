@@ -1,0 +1,2706 @@
+<?xml version="1.0"?>
+
+<sdf version="1.4">
+  <world name="default">
+
+<physics type="ode">
+  <real_time_update_rate>0</real_time_update_rate>
+</physics>
+
+
+<scene>
+  <ambient>0.63 0.7 0.8 1</ambient>
+  <background>0.15 0.15 0.17 1</background>
+  <shadows>true</shadows>
+  <sky>
+    <clouds>
+      <speed>12</speed>
+    </clouds>
+
+  </sky>
+  <fog></fog>
+</scene>
+
+    <!-- MODELS -->
+    <include>
+      <uri>model://asphalt</uri>
+      <pose>0.0 0.0 0.0 0 0 0</pose>
+    </include>
+
+    <model name='small_track'>
+    <static>true</static>
+
+    <!-- Start cones -->
+
+        <link name='start_cone1'>
+        <pose frame=''>6.3 1.5 -0.005 0 -0 0.1</pose>
+        <collision name="collision"><geometry><mesh>
+              <uri>model://BigOrangeCone.dae</uri>
+        </mesh></geometry></collision>
+        <visual name="visual"><geometry><mesh>
+              <uri>model://BigOrangeCone.dae</uri>
+        </mesh></geometry></visual>
+        </link>
+
+        <link name='start_cone2'>
+        <pose frame=''>6.3 -1.5 0 0 -0 1</pose>
+        <collision name="collision"><geometry><mesh>
+              <uri>model://BigOrangeCone.dae</uri>
+        </mesh></geometry></collision>
+        <visual name="visual"><geometry><mesh>
+              <uri>model://BigOrangeCone.dae</uri>
+        </mesh></geometry></visual>
+        </link>
+
+        <link name='start_cone3'>
+        <pose frame=''>5.7 1.5 -0.005 0 -0 0.1</pose>
+        <collision name="collision"><geometry><mesh>
+              <uri>model://BigOrangeCone.dae</uri>
+        </mesh></geometry></collision>
+        <visual name="visual"><geometry><mesh>
+              <uri>model://BigOrangeCone.dae</uri>
+        </mesh></geometry></visual>
+        </link>
+
+        <link name='start_cone4'>
+        <pose frame=''>5.7 -1.5 0 0 -0 1</pose>
+        <collision name="collision"><geometry><mesh>
+              <uri>model://BigOrangeCone.dae</uri>
+        </mesh></geometry></collision>
+        <visual name="visual"><geometry><mesh>
+              <uri>model://BigOrangeCone.dae</uri>
+        </mesh></geometry></visual>
+        </link>
+
+
+    <!-- Blue cones -->
+
+        <link name='blue_cone_1'>
+          <pose frame=''> 54.000000 1.500000  -0.005 0 -0 16</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_2'>
+          <pose frame=''> -18.203360 37.289364 -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_3'>
+          <pose frame=''> -72.233292 -24.089661  -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_4'>
+          <pose frame=''> -1.818698 37.636406 -0.005 0 -0 3</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_5'>
+          <pose frame=''> 15.381102 20.095610 -0.005 0 -0 10</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_6'>
+          <pose frame=''> -77.383598 -23.145473 -0.005 0 -0 4</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_7'>
+          <pose frame=''> -98.945885 -11.839281  -0.005 0 -0 4</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_8'>
+          <pose frame=''> 42.696079 26.472775  -0.005 0 -0 3</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_9'>
+          <pose frame=''> -100.197716 -20.899176 -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_10'>
+          <pose frame=''> -90.817162 -11.467296 -0.005 0 -0 0</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_11'>
+          <pose frame=''> -40.619034 13.259471 -0.005 0 -0 2</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_12'>
+          <pose frame=''> 19.161938 16.533222 -0.005 0 -0 5</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_13'>
+          <pose frame=''> 48.732639 24.233114 -0.005 0 -0 20</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_14'>
+          <pose frame=''> -65.236755 -9.092577 -0.005 0 -0 5</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_15'>
+          <pose frame=''> -33.154636 35.941967 -0.005 0 -0 1</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_16'>
+          <pose frame=''> -35.452843 9.990946 -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_17'>
+          <pose frame=''> 8.277493 27.167252 -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_18'>
+          <pose frame=''> 63.142319 2.284110 -0.005 0 -0 5</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_19'>
+          <pose frame=''> 62.877468 14.308678 -0.005 0 -0 20</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_20'>
+          <pose frame=''> -73.449898 -16.368999 -0.005 0 -0 16</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_21'>
+          <pose frame=''> -101.127632 -19.103191  -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_22'>
+          <pose frame=''> -49.577614 -3.123544 -0.005 0 -0 0</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_23'>
+          <pose frame=''> -4.554579 1.505747 -0.005 0 -0 10</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_24'>
+          <pose frame=''> 29.000000 1.500000  -0.005 0 -0 2</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_25'>
+          <pose frame=''> -87.636101 -22.866945  -0.005 0 -0 0</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_26'>
+          <pose frame=''> -52.689762 -23.734543 -0.005 0 -0 16</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_27'>
+          <pose frame=''> -79.011505 -15.784540  -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_28'>
+          <pose frame=''> 1.000000 1.500000  -0.005 0 -0 10</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_29'>
+          <pose frame=''> -81.483002 -14.990967  -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_30'>
+          <pose frame=''> -13.446061 2.564966 -0.005 0 -0 10</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_31'>
+          <pose frame=''> -43.500000 22.100000 -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_32'>
+          <pose frame=''> -52.503670 -21.763086 -0.005 0 -0 3</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_33'>
+          <pose frame=''> -45.291676 27.590427 -0.005 0 -0 3</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_34'>
+          <pose frame=''> -58.452961 -28.545006 -0.005 0 -0 16</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_35'>
+          <pose frame=''> 13.999999 1.500000  -0.005 0 -0 11</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_36'>
+          <pose frame=''> -95.180298 -10.517510  -0.005 0 -0 19</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_37'>
+          <pose frame=''> -0.227495 36.352962 -0.005 0 -0 1</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_38'>
+          <pose frame=''> -16.528826 7.847492 -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_39'>
+          <pose frame=''> -51.808453 -4.664858 -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_40'>
+          <pose frame=''> -62.806637 -27.703159 -0.005 0 -0 14</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_41'>
+          <pose frame=''> -101.202003 -15.092786 -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_42'>
+          <pose frame=''> -53.867001 -17.527664 -0.005 0 -0 14</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_43'>
+          <pose frame=''> -65.008026 -26.802376 -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_44'>
+          <pose frame=''> -15.969521 5.733095 -0.005 0 -0 0</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_45'>
+          <pose frame=''> 34.326401 19.745953 -0.005 0 -0 19</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_46'>
+          <pose frame=''> -54.916302 -15.221489 -0.005 0 -0 9</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_47'>
+          <pose frame=''> 46.646366 25.440365 -0.005 0 -0 9</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_48'>
+          <pose frame=''> -70.633942 -15.401628 -0.005 0 -0 5</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_49'>
+          <pose frame=''> -44.974030 31.578033 -0.005 0 -0 16</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_50'>
+          <pose frame=''> 56.837341 18.557426 -0.005 0 -0 3</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_51'>
+          <pose frame=''> -45.464333 29.653664 -0.005 0 -0 16</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_52'>
+          <pose frame=''> 11.818432 23.614925 -0.005 0 -0 8</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_53'>
+          <pose frame=''> -45.618450 -0.371642 -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_54'>
+          <pose frame=''> 65.880791 5.133978  -0.005 0 -0 15</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_55'>
+          <pose frame=''> 24.615112 14.536574 -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_56'>
+          <pose frame=''> -2.034740 1.505908 -0.005 0 -0 15</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_57'>
+          <pose frame=''> -23.728661 16.095722 -0.005 0 -0 20</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_58'>
+          <pose frame=''> -23.184896 36.829380 -0.005 0 -0 11</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_59'>
+          <pose frame=''> 35.679909 21.795795 -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_60'>
+          <pose frame=''> 44.663731 26.289246 -0.005 0 -0 14</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_61'>
+          <pose frame=''> -60.605064 -28.307667 -0.005 0 -0 20</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_62'>
+          <pose frame=''> 38.854530 24.975353 -0.005 0 -0 6</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_63'>
+          <pose frame=''> -44.673161 25.352701 -0.005 0 -0 1</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_64'>
+          <pose frame=''> -59.568054 -2.687655 -0.005 0 -0 8</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_65'>
+          <pose frame=''> 19.000000 1.500000  -0.005 0 -0 8</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_66'>
+          <pose frame=''> 66.428604 7.052503  -0.005 0 -0 2</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_67'>
+          <pose frame=''> -55.518875 -12.335184 -0.005 0 -0 2</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_68'>
+          <pose frame=''> 64.756195 3.485732 -0.005 0 -0 14</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_69'>
+          <pose frame=''> -55.144592 -9.370777 -0.005 0 -0 10</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_70'>
+          <pose frame=''> -98.785179 -22.322855 -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_71'>
+          <pose frame=''> -7.049630 1.485980 -0.005 0 -0 9</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_72'>
+          <pose frame=''> -86.205849 -13.195700  -0.005 0 -0 8</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_73'>
+          <pose frame=''> -61.641941 -3.684448 -0.005 0 -0 4</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_74'>
+          <pose frame=''> 61.224262 1.625004 -0.005 0 -0 10</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_75'>
+          <pose frame=''> -42.065094 18.375036 -0.005 0 -0 20</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_76'>
+          <pose frame=''> 44.000000 1.500000  -0.005 0 -0 15</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_77'>
+          <pose frame=''> 39.000000 1.500000  -0.005 0 -0 9</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_78'>
+          <pose frame=''> 30.143902 15.984072 -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_79'>
+          <pose frame=''> 17.168558 18.338430 -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_80'>
+          <pose frame=''> -53.777554 -6.726722 -0.005 0 -0 19</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_81'>
+          <pose frame=''> -11.629099 1.727211 -0.005 0 -0 16</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_82'>
+          <pose frame=''> -40.657463 10.338839 -0.005 0 -0 0</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_83'>
+          <pose frame=''> 37.159824 23.520557  -0.005 0 -0 8</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_84'>
+          <pose frame=''> -41.619873 7.512806 -0.005 0 -0 9</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_85'>
+          <pose frame=''> 65.732086 11.064836 -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_86'>
+          <pose frame=''> -40.397339 35.296658 -0.005 0 -0 9</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_87'>
+          <pose frame=''> -5.848275 38.447243 -0.005 0 -0 10</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_88'>
+          <pose frame=''> -92.607437 -23.351156 -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_89'>
+          <pose frame=''> -53.505787 -25.591663  -0.005 0 -0 0</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_90'>
+          <pose frame=''> 21.687868 15.080817 -0.005 0 -0 18</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_91'>
+          <pose frame=''> -97.161842 -10.894823 -0.005 0 -0 15</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_92'>
+          <pose frame=''> 27.506622 14.909771 -0.005 0 -0 0</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_93'>
+          <pose frame=''> 60.953201 15.737279 -0.005 0 -0 5</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_94'>
+          <pose frame=''> 1.360185 34.517464 -0.005 0 -0 14</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_95'>
+          <pose frame=''> -63.092209 -4.982679 -0.005 0 -0 15</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_96'>
+          <pose frame=''> -3.698098 38.312195 -0.005 0 -0 6</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_97'>
+          <pose frame=''> 4.000000 1.500000  -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_98'>
+          <pose frame=''> -28.167934 36.379292 -0.005 0 -0 15</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_99'>
+          <pose frame=''> -32.088394 14.136668 -0.005 0 -0 18</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_100'>
+          <pose frame=''> -29.629515 15.727455 -0.005 0 -0 20</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_101'>
+          <pose frame=''> -66.538834 -11.467772 -0.005 0 -0 18</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_102'>
+          <pose frame=''> -21.103128 14.900944 -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_103'>
+          <pose frame=''> -17.226036 10.575194 -0.005 0 -0 18</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_104'>
+          <pose frame=''> -38.468304 6.224947 -0.005 0 -0 9</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_105'>
+          <pose frame=''> -18.864746 13.066055 -0.005 0 -0 19</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_106'>
+          <pose frame=''> 11.000000 1.500000  -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_107'>
+          <pose frame=''> 34.000000 1.500000  -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_108'>
+          <pose frame=''> -52.992050 -19.708132 -0.005 0 -0 18</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_109'>
+          <pose frame=''> -43.864006 33.256660 -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_110'>
+          <pose frame=''> -38.162663 35.547569 -0.005 0 -0 14</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_111'>
+          <pose frame=''> -56.540173 -28.169542  -0.005 0 -0 18</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_112'>
+          <pose frame=''> 58.980511 1.499873  -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_113'>
+          <pose frame=''> -82.448463 -22.710152 -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_114'>
+          <pose frame=''> -54.993320 -0.699995 -0.005 0 -0 5</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_115'>
+          <pose frame=''> 64.538773 12.776649  -0.005 0 -0 18</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_116'>
+          <pose frame=''> -42.293591 34.545181 -0.005 0 -0 14</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_117'>
+          <pose frame=''> -100.341003 -13.283381  -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_118'>
+          <pose frame=''> -101.472481 -17.095917 -0.005 0 -0 5</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_119'>
+          <pose frame=''> -64.222435 -6.838768 -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_120'>
+          <pose frame=''> -26.716833 16.448679 -0.005 0 -0 16</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_121'>
+          <pose frame=''> -43.463768 5.193069 -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_122'>
+          <pose frame=''> 24.000000 1.500000  -0.005 0 -0 6</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_123'>
+          <pose frame=''> -93.073982 -10.800219  -0.005 0 -0 1</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_124'>
+          <pose frame=''> -33.982674 12.081268 -0.005 0 -0 14</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_125'>
+          <pose frame=''> 49.000000 1.500000  -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_126'>
+          <pose frame=''> 66.355820 9.120525  -0.005 0 -0 11</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_127'>
+          <pose frame=''> -13.222090 37.758274 -0.005 0 -0 15</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_128'>
+          <pose frame=''> 52.742069 21.497179 -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_129'>
+          <pose frame=''> -45.732395 3.541149 -0.005 0 -0 2</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_130'>
+          <pose frame=''> -50.400555 1.304744 -0.005 0 -0 15</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_131'>
+          <pose frame=''> -67.309235 -25.773090 -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_132'>
+          <pose frame=''> -94.957474 -23.474491 -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_133'>
+          <pose frame=''> -54.839680 -27.133444 -0.005 0 -0 6</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_134'>
+          <pose frame=''> 4.777573 30.778250 -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_135'>
+          <pose frame=''> -97.001198 -23.199638 -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_136'>
+          <pose frame=''> -8.240476 38.243904 -0.005 0 -0 0</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_137'>
+          <pose frame=''> -41.231274 15.926391 -0.005 0 -0 2</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_138'>
+          <pose frame=''> 32.455906 17.609703  -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_139'>
+          <pose frame=''> -41.894341 2.800817 -0.005 0 -0 9</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_140'>
+          <pose frame=''> 8.000000 1.500000  -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_141'>
+          <pose frame=''> 40.727711 26.012917  -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_142'>
+          <pose frame=''> -14.930196 3.942144 -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_143'>
+          <pose frame=''> -68.297371 -13.654128 -0.005 0 -0 4</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_144'>
+          <pose frame=''> -76.373138 -16.383617 -0.005 0 -0 1</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='blue_cone_145'>
+          <pose frame=''> -9.503110 1.493240 -0.005 0 -0 6</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://BlueConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+
+
+    <!-- Yellow cones -->
+
+
+        <link name='yellow_cone_1'>
+          <pose frame=''> -18.481714 40.276424  -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_2'>
+          <pose frame=''> 69.314423 9.617207 -0.005 0 -0 20</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_3'>
+          <pose frame=''> -7.038819 -1.509220 -0.005 0 -0 0</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_4'>
+          <pose frame=''> 24.693386 17.535553  -0.005 0 -0 4</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_5'>
+          <pose frame=''> -9.585269 -1.500852 -0.005 0 -0 15</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_6'>
+          <pose frame=''> -73.015152 -26.985985 -0.005 0 -0 0</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_7'>
+          <pose frame=''> -30.126360 11.873536 -0.005 0 -0 3</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_8'>
+          <pose frame=''> 49.000000 -1.500000 -0.005 0 -0 18</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_9'>
+          <pose frame=''> -87.379890 -25.855986 -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_10'>
+          <pose frame=''> 64.771362 16.635303  -0.005 0 -0 15</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_11'>
+          <pose frame=''> -52.525269 -12.219086 -0.005 0 -0 0</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_12'>
+          <pose frame=''> -51.366779 -8.504216 -0.005 0 -0 6</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_13'>
+          <pose frame=''> -28.434231 39.367451  -0.005 0 -0 16</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_14'>
+          <pose frame=''> -13.507029 40.744709  -0.005 0 -0 11</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_15'>
+          <pose frame=''> -68.486786 -28.532322  -0.005 0 -0 20</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_16'>
+          <pose frame=''> 26.728333 17.807056  -0.005 0 -0 2</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_17'>
+          <pose frame=''> -43.594048 12.873094  -0.005 0 -0 18</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_18'>
+          <pose frame=''> -103.975273 -20.047089 -0.005 0 -0 19</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_19'>
+          <pose frame=''> -82.581535 -25.707199  -0.005 0 -0 6</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_20'>
+          <pose frame=''> -19.471922 7.291144 -0.005 0 -0 18</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_21'>
+          <pose frame=''> -51.612354 4.049109  -0.005 0 -0 18</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_22'>
+          <pose frame=''> 64.541901 -0.369411 -0.005 0 -0 1</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_23'>
+          <pose frame=''> -67.952560 -7.818052  -0.005 0 -0 2</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_24'>
+          <pose frame=''> -45.500740 7.395506  -0.005 0 -0 10</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_25'>
+          <pose frame=''> -44.106251 15.069367  -0.005 0 -0 10</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_26'>
+          <pose frame=''> -75.976440 -13.409962  -0.005 0 -0 5</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_27'>
+          <pose frame=''> 68.416977 12.403251  -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_28'>
+          <pose frame=''> -24.586853 13.226081 -0.005 0 -0 15</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_29'>
+          <pose frame=''> -69.047256 -9.822226  -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_30'>
+          <pose frame=''> 68.594444 3.854880 -0.005 0 -0 20</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_31'>
+          <pose frame=''> -100.748360 -9.441137 -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_32'>
+          <pose frame=''> -22.685324 12.357719 -0.005 0 -0 14</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_33'>
+          <pose frame=''> -21.071785 11.041130 -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_34'>
+          <pose frame=''> 19.000000 -1.500000 -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_35'>
+          <pose frame=''> 30.462151 19.851341 -0.005 0 -0 2</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_36'>
+          <pose frame=''> 34.000000 -1.500000 -0.005 0 -0 8</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_37'>
+          <pose frame=''> 29.000000 -1.500000 -0.005 0 -0 3</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_38'>
+          <pose frame=''> 10.414811 29.272453  -0.005 0 -0 3</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_39'>
+          <pose frame=''> 39.000000 -1.500000 -0.005 0 -0 5</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_40'>
+          <pose frame=''> -52.122471 -14.128630 -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_41'>
+          <pose frame=''> 13.999999 -1.500000 -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_42'>
+          <pose frame=''> -61.185234 -31.251034  -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_43'>
+          <pose frame=''> -44.885315 17.352118  -0.005 0 -0 19</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_44'>
+          <pose frame=''> 37.130989 27.430836  -0.005 0 -0 9</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_45'>
+          <pose frame=''> -58.380322 -31.544128 -0.005 0 -0 14</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_46'>
+          <pose frame=''> -48.454163 29.900459  -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_47'>
+          <pose frame=''> -47.264812 6.120239  -0.005 0 -0 15</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_48'>
+          <pose frame=''> 54.000000 -1.500000 -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_49'>
+          <pose frame=''> -55.433987 -30.958155 -0.005 0 -0 3</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_50'>
+          <pose frame=''> -80.492661 -12.159145 -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_51'>
+          <pose frame=''> -77.684914 -26.130302 -0.005 0 -0 3</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_52'>
+          <pose frame=''> 54.522823 23.911497  -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_53'>
+          <pose frame=''> -17.276596 2.080493 -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_54'>
+          <pose frame=''> -85.116234 -10.400576 -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_55'>
+          <pose frame=''> -26.516077 13.460196 -0.005 0 -0 18</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_56'>
+          <pose frame=''> -50.971661 -27.197338 -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_57'>
+          <pose frame=''> -23.457857 39.816936  -0.005 0 -0 20</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_58'>
+          <pose frame=''> 8.000000 -1.500000 -0.005 0 -0 0</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_59'>
+          <pose frame=''> 22.733564 17.892670  -0.005 0 -0 10</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_60'>
+          <pose frame=''> -52.285713 -10.264160 -0.005 0 -0 11</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_61'>
+          <pose frame=''> -0.341042 40.247253  -0.005 0 -0 8</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_62'>
+          <pose frame=''> 11.000000 -1.500000 -0.005 0 -0 1</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_63'>
+          <pose frame=''> 58.616280 -1.499873 -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_64'>
+          <pose frame=''> -49.789875 -24.503078  -0.005 0 -0 0</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_65'>
+          <pose frame=''> -33.008141 8.260403 -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_66'>
+          <pose frame=''> 13.933575 25.742405  -0.005 0 -0 11</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_67'>
+          <pose frame=''> -92.361176 -26.341032  -0.005 0 -0 3</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_68'>
+          <pose frame=''> -66.914421 -5.514679  -0.005 0 -0 8</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_69'>
+          <pose frame=''> -5.947755 41.445595  -0.005 0 -0 15</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_70'>
+          <pose frame=''> -52.891964 -29.415201 -0.005 0 -0 3</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_71'>
+          <pose frame=''> 28.698772 18.613066  -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_72'>
+          <pose frame=''> -60.781403 0.056028  -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_73'>
+          <pose frame=''> -95.000961 -26.474174 -0.005 0 -0 4</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_74'>
+          <pose frame=''> 4.000000 -1.500000 -0.005 0 -0 2</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_75'>
+          <pose frame=''> 44.000000 -1.500000 -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_76'>
+          <pose frame=''> -95.236481 -7.518037 -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_77'>
+          <pose frame=''> -36.238392 4.225239 -0.005 0 -0 2</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_78'>
+          <pose frame=''> 19.263224 20.486074  -0.005 0 -0 11</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_79'>
+          <pose frame=''> -3.128349 41.257599  -0.005 0 -0 6</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_80'>
+          <pose frame=''> -98.141930 -8.059435  -0.005 0 -0 1</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_81'>
+          <pose frame=''> -33.409298 38.931141  -0.005 0 -0 16</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_82'>
+          <pose frame=''> -65.444412 -3.120653  -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_83'>
+          <pose frame=''> 24.000000 -1.500000 -0.005 0 -0 18</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_84'>
+          <pose frame=''> -56.184505 2.053380  -0.005 0 -0 10</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_85'>
+          <pose frame=''> 66.773682 14.777944 -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_86'>
+          <pose frame=''> -46.194363 20.907045  -0.005 0 -0 6</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_87'>
+          <pose frame=''> -43.815548 37.130455  -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_88'>
+          <pose frame=''> 20.964149 18.931564  -0.005 0 -0 8</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_89'>
+          <pose frame=''> -70.408409 -11.522573  -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_90'>
+          <pose frame=''> 66.913811 1.401337 -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_91'>
+          <pose frame=''> -72.049683 -12.756690  -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_92'>
+          <pose frame=''> 6.955038 32.841896  -0.005 0 -0 8</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_93'>
+          <pose frame=''> 35.037319 25.640697 -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_94'>
+          <pose frame=''> -12.411074 -1.164130 -0.005 0 -0 1</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_95'>
+          <pose frame=''> -47.717155 32.792633  -0.005 0 -0 6</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_96'>
+          <pose frame=''> -102.802505 -11.568443 -0.005 0 -0 3</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_97'>
+          <pose frame=''> 1.000000 -1.509168 -0.005 0 -0 6</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_98'>
+          <pose frame=''> 31.865313 21.461483  -0.005 0 -0 11</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_99'>
+          <pose frame=''> 50.276180 26.805559  -0.005 0 -0 5</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_100'>
+          <pose frame=''> 17.485100 22.234114  -0.005 0 -0 9</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_101'>
+          <pose frame=''> 39.617725 28.800018 -0.005 0 -0 6</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_102'>
+          <pose frame=''> -2.053847 -1.489250 -0.005 0 -0 3</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_103'>
+          <pose frame=''> -15.112137 0.075885 -0.005 0 -0 9</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_104'>
+          <pose frame=''> -19.976860 9.390157 -0.005 0 -0 11</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_105'>
+          <pose frame=''> -51.130199 -16.299068 -0.005 0 -0 0</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_106'>
+          <pose frame=''> -92.404289 -7.875920 -0.005 0 -0 0</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_107'>
+          <pose frame=''> -104.078331 -14.240314  -0.005 0 -0 2</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_108'>
+          <pose frame=''> -66.224136 -29.544834  -0.005 0 -0 5</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_109'>
+          <pose frame=''> -43.767452 -2.726454 -0.005 0 -0 8</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_110'>
+          <pose frame=''> -97.874840 -26.069614  -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_111'>
+          <pose frame=''> 61.755932 -1.327508 -0.005 0 -0 9</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_112'>
+          <pose frame=''> 33.267113 23.578606  -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_113'>
+          <pose frame=''> -78.205612 -12.894810 -0.005 0 -0 5</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_114'>
+          <pose frame=''> 3.626577 36.483032  -0.005 0 -0 17</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_115'>
+          <pose frame=''> -102.625145 -22.662012  -0.005 0 -0 1</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_116'>
+          <pose frame=''> -38.370098 38.540390  -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_117'>
+          <pose frame=''> -48.233799 27.003994  -0.005 0 -0 15</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_118'>
+          <pose frame=''> -28.416246 12.988968 -0.005 0 -0 1</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_119'>
+          <pose frame=''> -31.604828 10.259953 -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_120'>
+          <pose frame=''> 58.550827 21.019939  -0.005 0 -0 7</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_121'>
+          <pose frame=''> 1.942149 38.424831  -0.005 0 -0 16</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_122'>
+          <pose frame=''> -48.012520 -5.677328 -0.005 0 -0 9</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_123'>
+          <pose frame=''> 69.409256 6.712276 -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_124'>
+          <pose frame=''> -47.525997 24.424623  -0.005 0 -0 1</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_125'>
+          <pose frame=''> -49.512375 -21.534719  -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_126'>
+          <pose frame=''> 42.478962 29.464909 -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_127'>
+          <pose frame=''> -73.925621 -13.406960  -0.005 0 -0 12</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_128'>
+          <pose frame=''> -104.471825 -17.158436 -0.005 0 -0 10</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_129'>
+          <pose frame=''> -89.868324 -8.621297  -0.005 0 -0 18</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_130'>
+          <pose frame=''> -8.535830 41.229332  -0.005 0 -0 3</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_131'>
+          <pose frame=''> -63.201965 -1.121965  -0.005 0 -0 10</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_132'>
+          <pose frame=''> 45.435436 29.188293  -0.005 0 -0 20</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_133'>
+          <pose frame=''> -49.892757 -6.967342 -0.005 0 -0 1</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_134'>
+          <pose frame=''> -41.091507 38.215244  -0.005 0 -0 6</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_135'>
+          <pose frame=''> -4.533961 -1.489401 -0.005 0 -0 15</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_136'>
+          <pose frame=''> -39.880592 0.583577 -0.005 0 -0 13</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_137'>
+          <pose frame=''> 62.683960 18.187683  -0.005 0 -0 15</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_138'>
+          <pose frame=''> -100.538689 -24.757025  -0.005 0 -0 18</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_139'>
+          <pose frame=''> -50.150917 -18.744825 -0.005 0 -0 3</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_140'>
+          <pose frame=''> -44.249756 8.956314  -0.005 0 -0 6</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_141'>
+          <pose frame=''> 48.034672 28.099804  -0.005 0 -0 19</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_142'>
+          <pose frame=''> -18.739132 4.592664 -0.005 0 -0 3</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_143'>
+          <pose frame=''> -43.617577 10.826433  -0.005 0 -0 15</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_144'>
+          <pose frame=''> -46.091225 35.266510  -0.005 0 -0 18</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+        <link name='yellow_cone_145'>
+          <pose frame=''> -63.798889 -30.534313  -0.005 0 -0 11</pose>
+         <collision name="collision"><geometry><box><size> 0.2 0.2 0.01</size>
+           </box></geometry></collision>
+          <visual name="visual"><geometry><mesh>
+                <uri>model://YellowConeLowPoly.dae</uri>
+          </mesh></geometry></visual>
+        </link>
+
+
+
+
+    </model>
+
+  <!-- A global light source -->
+    <include>
+      <pose>0 0 0 0 0 0</pose>
+      <uri>model://sun_sim</uri>
+    </include>
+  </world>
+</sdf>
+
+

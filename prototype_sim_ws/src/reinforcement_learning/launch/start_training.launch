@@ -1,0 +1,6 @@
+<launch>
+    <!-- This version uses the openai_ros environments -->
+    <rosparam command="load" file="$(find reinforcement_learning)/config/fs_simulator_openai_qlearn.yaml" />
+    <!-- Launch the training system
+    <node pkg="reinforcement_learning" name="fssimulator_maze" type="ddpg_pendulum.py" output="screen"/> -->
+</launch>
