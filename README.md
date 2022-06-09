@@ -6,6 +6,7 @@
 
 ![](resources/imitation_5.gif "Racing with a wallfollowing algorithm")
 
+## **Perception (cGAN)**
 ![](resources/formula_gan.gif "cGAN Segmentation and Depth estimation")
 
 
