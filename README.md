@@ -14,11 +14,18 @@ To mitigate the existing sim-to-real visual gap, a U-Net is trained to create a 
 ### Results
 The performance of the U-Net over an image belonging to the real domain is shown below.
 
-- Input (real domain) and segmentation (simplified domain): 
+- [ Input ](https://www.youtube.com/watch?v=FbKLE7uar9Y) (real domain) and segmentation (simplified domain): 
+
 ![](resources/gan_segmentation.png "cGAN Segmentation")
+
+- Semantic segmentation of a virtual top view of input image (point-cloud), created with the pixel-wise depth estimation.
+
 ![](resources/gan_depth.png "cGAN Segmentation and Depth estimation")
 
+- Semantic segmentation and depth estimation of different scenes.
+
 ![](resources/formula_gan.gif "cGAN Segmentation and Depth estimation")
+
 -------------------------
 
 ## **Imitation Learning**
