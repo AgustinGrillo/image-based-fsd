@@ -20,7 +20,9 @@ The performance of the U-Net over an image belonging to the real domain is shown
 
 - Semantic segmentation of a virtual top view of input image (point-cloud), created with the pixel-wise depth estimation.
 
-![](resources/gan_depth.png "cGAN Segmentation and Depth estimation")
+<p align="center">
+  <img src="resources/gan_depth.png" />
+</p>
 
 - Semantic segmentation and depth estimation of different scenes.
 
