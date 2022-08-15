@@ -28,8 +28,6 @@ The performance of the U-Net over an image belonging to the real domain is shown
 
 ![](resources/formula_gan.gif "cGAN Segmentation and Depth estimation")
 
--------------------------
-
 ## Driving policy
 The driving network was trained via Behavioral Cloning (Imitation Learning), with a dataset created using the Gazebo simulator.
 
