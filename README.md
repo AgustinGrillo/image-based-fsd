@@ -56,5 +56,7 @@ To fully test the approach, a robotic platform was developed, in which both netw
 
 ### Results 
 
-![](resources/prototype.gif "Prototype test")
+<p align="center">
+  <img src="resources/prototype.gif" />
+</p>
 
