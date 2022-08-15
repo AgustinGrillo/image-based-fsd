@@ -54,7 +54,7 @@ The performance of the network, over new simulated tracks can be seen below.
 ## Prototype
 To fully test the approach, a robotic platform was developed, in which both networks were run un tandem.
 
-![](resources/proto.png "Prototype")
+![](resources/prototype.png "Prototype")
 
 ### Results
 
