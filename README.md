@@ -2,7 +2,7 @@
 
 Image-based self-driving algorithm, fully trained in simulation and capable of commanding a vehicle around an unknown track delimited by cones. 
 
-[Video Prototipo andando (Exterior + GAN)]
+![](resources/intro.gif "demo")
 
 The following work implements two Neural Networks in tandem, a first one which creates a semantic segmentation and pixel-wise depth estimation of the input image; and a second one, which based on the semantic segmentation outputs the respective vehicle command.
 
