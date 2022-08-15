@@ -1,6 +1,6 @@
 # Image-based autonomous driving system for an e-fsae
 
-Image-based self-driving algorithm, fully trained in simulation and capable of commanding a vehicle around an unknown track delimited by cones. 
+Image-based self-driving algorithm, **fully trained in simulation** and capable of commanding a vehicle around an unknown track delimited by cones. 
 
 <p align="center">
   <img src="resources/intro.gif" />
@@ -52,4 +52,9 @@ The performance of the network, over new simulated tracks can be seen below.
 ![](resources/imitation_4.gif "Racing with a wallfollowing algorithm")
 
 ## Prototype
+To fully test the approach, a robotic platform was developed, in which both networks were run un tandem.
+
+![](resources/proto.png "Prototype")
+
+### Results
 
