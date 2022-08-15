@@ -8,6 +8,8 @@ The following work implements two Neural Networks in tandem, a first one which c
 
 ![](resources/architecture.png "architecture")
 
+For a more detailed explanation, see the full [thesis](thesis.pdf).
+
 ## Semantic Segmentation and Depth Estimation
 To mitigate the existing sim-to-real visual gap, a U-Net is trained to create a segmentation of the cones present in the scene. This converts the current image (belonging to either the real or the simulation domain), into a common simplified domain. To accomplish this, a technique known as Domain Randomization was used.
 
