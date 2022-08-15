@@ -15,6 +15,13 @@ For a more detailed explanation, see the full [thesis](thesis.pdf).
 ## Semantic Segmentation and Depth Estimation
 To mitigate the existing sim-to-real visual gap, a U-Net is trained to create a segmentation of the cones present in the scene. This converts the current image (belonging to either the real or the simulation domain), into a common simplified domain. To accomplish this, a technique known as Domain Randomization was used.
 
+- Sim-to-real gap:
+![](resources/sim2real.png "sim to real")
+
+- Dataset example
+![](resources/dataset.png "sim to real")
+
+
 ### Results
 The performance of the U-Net over an image belonging to the real domain is shown below.
 
@@ -22,7 +29,7 @@ The performance of the U-Net over an image belonging to the real domain is shown
 
 ![](resources/gan_segmentation.png "cGAN Segmentation")
 
-- Semantic segmentation of a virtual top view of input image (point-cloud), created with the pixel-wise depth estimation.
+- Semantic segmentation of a virtual top view of the input image (point-cloud), created with the pixel-wise depth estimation.
 
 <p align="center">
   <img src="resources/gan_depth.png" />
@@ -41,4 +48,6 @@ The performance of the network, over new simulated tracks can be seen below.
 ![](resources/imitation_3.gif "Racing with a wallfollowing algorithm")
 
 ![](resources/imitation_4.gif "Racing with a wallfollowing algorithm")
+
+## Prototype
 
