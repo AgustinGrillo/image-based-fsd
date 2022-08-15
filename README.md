@@ -30,11 +30,13 @@ The performance of the U-Net over an image belonging to the real domain is shown
 
 -------------------------
 
-## **Imitation Learning**
+## Driving policy
+The driving network was trained via Behavioral Cloning (Imitation Learning), with a dataset created using the Gazebo simulator.
+
+### Results
+The performance of the network, over new simulated tracks can be seen below.
 
 ![](resources/imitation_3.gif "Racing with a wallfollowing algorithm")
 
 ![](resources/imitation_4.gif "Racing with a wallfollowing algorithm")
-
-![](resources/imitation_5.gif "Racing with a wallfollowing algorithm")
 
