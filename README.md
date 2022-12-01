@@ -60,3 +60,10 @@ To fully test the approach, a robotic platform was developed, in which both netw
   <img src="resources/prototype.gif" />
 </p>
 
+## Authors
+
+- [Agustin Grillo](https://github.com/AgustinGrillo)
+- [Manuel Valentin](https://github.com/mvalentinarg)
+
+
+
